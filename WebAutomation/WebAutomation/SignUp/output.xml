@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on darwin)" generated="20240112 09:50:51.601" rpa="false" schemaversion="4">
+<suite id="s1" name="SignUp" source="/Users/socar/Documents/WebAutomation/SignUp/SignUp.robot">
+<test id="s1-t1" name="Open &amp; Verify CoinGecko" line="26">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.coingecko.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240112 09:50:51.861" level="INFO">Opening browser 'chrome' to base url 'https://www.coingecko.com'.</msg>
+<status status="PASS" starttime="20240112 09:50:51.860" endtime="20240112 09:50:56.808"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240112 09:50:56.809" endtime="20240112 09:50:57.403"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[contains(@class, 'tw-flex-1')]//h1[contains(@class, 'tw-text-gray-900') and normalize-space(text())='Cryptocurrency Prices by Market Cap']</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240112 09:50:57.403" endtime="20240112 09:50:57.713"/>
+</kw>
+<status status="PASS" starttime="20240112 09:50:51.859" endtime="20240112 09:50:57.713"/>
+</test>
+<test id="s1-t2" name="Click Sign Up Button" line="31">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SignUpButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240112 09:50:57.715" level="INFO">Clicking element '//button[@type='button' and @class='tw-bg-primary-500 dark:tw-bg-primary-400 tw-shadow-primaryShadow !tw-mb-1 hover:tw-bg-primary-600 dark:hover:tw-bg-primary-300 hover:tw-shadow-primaryHover active:!tw-shadow-primaryActive tw-transition-all tw-duration-150 active:tw-translate-y-2 tw-items-center tw-justify-center tw-font-semibold tw-text-inline tw-rounded-lg tw-select-none focus:tw-outline-none tw-px-2.5 tw-py-1.5 tw-inline-flex']'.</msg>
+<status status="PASS" starttime="20240112 09:50:57.714" endtime="20240112 09:50:58.339"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240112 09:51:00.340" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240112 09:50:58.339" endtime="20240112 09:51:00.341"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${PopUpBoxHomepAge}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240112 09:51:00.341" endtime="20240112 09:51:00.679"/>
+</kw>
+<status status="PASS" starttime="20240112 09:50:57.714" endtime="20240112 09:51:00.679"/>
+</test>
+<test id="s1-t3" name="Click Continue With Google" line="36">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@id="new_user"]/div[1]/a[1]/button</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240112 09:51:00.680" endtime="20240112 09:51:00.855"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath= //*[@id="new_user"]/div[1]/a[1]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240112 09:51:00.856" level="INFO">Clicking element 'xpath= //*[@id="new_user"]/div[1]/a[1]/button'.</msg>
+<status status="PASS" starttime="20240112 09:51:00.855" endtime="20240112 09:51:02.668"/>
+</kw>
+<status status="PASS" starttime="20240112 09:51:00.680" endtime="20240112 09:51:02.669"/>
+</test>
+<test id="s1-t4" name="Input Sign In Field" line="40">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SignInGoogleFieldBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240112 09:51:02.670" endtime="20240112 09:51:02.779"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SignInGoogleFieldBox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240112 09:51:02.780" level="INFO">Clicking element '//*[@id="identifierId"]'.</msg>
+<status status="PASS" starttime="20240112 09:51:02.779" endtime="20240112 09:51:02.910"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${SignInGoogleFieldBox}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20240112 09:51:02.910" endtime="20240112 09:51:02.972"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SignInGoogleFieldBox}</arg>
+<arg>derricktester12@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240112 09:51:02.974" level="INFO">Typing text 'derricktester12@gmail.com' into text field '//*[@id="identifierId"]'.</msg>
+<status status="PASS" starttime="20240112 09:51:02.972" endtime="20240112 09:51:03.492"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath= //button[contains(@class, 'VfPpkd-LgbsSe') and span[text()='Next']]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240112 09:51:03.493" level="INFO">Clicking element 'xpath= //button[contains(@class, 'VfPpkd-LgbsSe') and span[text()='Next']]'.</msg>
+<status status="PASS" starttime="20240112 09:51:03.492" endtime="20240112 09:51:03.713"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${PasswordSection}</arg>
+<arg>70</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<msg timestamp="20240112 09:52:14.014" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240112 09:52:14.014" level="FAIL">Element '//*[@id="initialView"]/div[2]/div/div[1]/div' did not appear in 1 minute 10 seconds.</msg>
+<status status="FAIL" starttime="20240112 09:51:03.713" endtime="20240112 09:52:14.023"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${PasswordSection}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="NOT RUN" starttime="20240112 09:52:14.023" endtime="20240112 09:52:14.023"/>
+</kw>
+<status status="FAIL" starttime="20240112 09:51:02.669" endtime="20240112 09:52:14.023">Element '//*[@id="initialView"]/div[2]/div/div[1]/div' did not appear in 1 minute 10 seconds.</status>
+</test>
+<test id="s1-t5" name="Input Password Field" line="50">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PasswordInputBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240112 09:52:14.024" endtime="20240112 09:52:14.047"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PasswordInputBox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240112 09:52:14.048" level="INFO">Clicking element '//*[@id="password"]/div[1]/div/div[1]/input'.</msg>
+<status status="PASS" starttime="20240112 09:52:14.047" endtime="20240112 09:52:14.109"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${PasswordInputBox}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20240112 09:52:14.109" endtime="20240112 09:52:14.149"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PasswordInputBox}</arg>
+<arg>Password@123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240112 09:52:14.151" level="INFO">Typing text 'Password@123' into text field '//*[@id="password"]/div[1]/div/div[1]/input'.</msg>
+<status status="PASS" starttime="20240112 09:52:14.149" endtime="20240112 09:52:14.281"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[contains(@class, 'VfPpkd-LgbsSe') and span[text()='Next']]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240112 09:52:14.283" level="INFO">Clicking element '//button[contains(@class, 'VfPpkd-LgbsSe') and span[text()='Next']]'.</msg>
+<status status="PASS" starttime="20240112 09:52:14.281" endtime="20240112 09:52:14.404"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>xpath= //button[contains(@class, 'tw-shadow-secondaryClicked') and contains(@class, 'dark:!tw-shadow-secondaryClickedDark') and contains(@class, '!tw-bg-slate-100') and contains(@class, 'dark:!tw-bg-moon-700')]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<msg timestamp="20240112 09:52:22.042" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240112 09:52:22.042" level="FAIL">Element with locator 'xpath= //button[contains(@class, 'tw-shadow-secondaryClicked') and contains(@class, 'dark:!tw-shadow-secondaryClickedDark') and contains(@class, '!tw-bg-slate-100') and contains(@class, 'dark:!tw-bg-moon-700')]' not found.</msg>
+<status status="FAIL" starttime="20240112 09:52:14.404" endtime="20240112 09:52:22.043"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20240112 09:52:22.043" endtime="20240112 09:52:22.043"/>
+</kw>
+<status status="FAIL" starttime="20240112 09:52:14.023" endtime="20240112 09:52:22.043">Element with locator 'xpath= //button[contains(@class, 'tw-shadow-secondaryClicked') and contains(@class, 'dark:!tw-shadow-secondaryClickedDark') and contains(@class, '!tw-bg-slate-100') and contains(@class, 'dark:!tw-bg-moon-700')]' not found.</status>
+</test>
+<status status="FAIL" starttime="20240112 09:50:51.602" endtime="20240112 09:52:22.044"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="2" skip="0" id="s1" name="SignUp">SignUp</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
